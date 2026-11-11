@@ -104,7 +104,8 @@ export default class CommandCodeUsage extends View {
 
   segments(t, pct, fill) {
     const total = 20;
-    const filled = Math.max(pct > 0 ? 1 : 0, Math.round((pct / 100) * total));
+    const shown = Math.round(pct);
+    const filled = shown <= 0 ? 0 : Math.min(total, Math.max(1, Math.round((shown / 100) * total)));
     return h_flex()
       .justify_between()
       .w("100%")

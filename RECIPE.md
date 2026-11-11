@@ -22,8 +22,9 @@ Top to bottom, in a 340×400 popup at the top of the window (offset 56):
      `Resets on <period end>`.
    The bar is 20 blocks, each 12×6 px, radius 1.5, laid out with `justify_between` across the full
    width. Filled blocks use the accent color below 70%, the working color from 70% to 90%, and the
-   blocked color at 90% or when the window reports `exceeded`. A nonzero percentage always fills at
-   least one block. An exceeded window shows `Limit reached` instead of the reset line.
+   blocked color at 90% or when the window reports `exceeded`. A percentage that rounds to 0 fills
+   no blocks; any nonzero percentage fills at least one. An exceeded window shows `Limit reached`
+   instead of the reset line.
 5. A 1 px divider.
 6. **This period**: total cost on the right (`$49.93`), then tokens (`112.7M tokens`) and
    `849 requests` in 10.5 px dim.
